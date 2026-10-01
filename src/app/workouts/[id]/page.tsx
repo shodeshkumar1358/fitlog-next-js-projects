@@ -1,4 +1,5 @@
 import AddButton from "@/app/Components/workoutsDetails/AddButton";
+import SaveForLatterButton from "@/app/Components/workoutsDetails/SaveForLatter";
 import SaveForLatter from "@/app/Components/workoutsDetails/SaveForLatter";
 import Image from "next/image";
 import React from "react";
@@ -171,8 +172,8 @@ const WorkoutsDetailsPage = async ({ params }: IworkoutDetailsPageProps) => {
 
             {/* ================= BUTTONS ================= */}
             <div className="mt-6 flex flex-wrap gap-2">
-              <AddButton workouts = {workouts}></AddButton>
-              <SaveForLatter></SaveForLatter>
+              <AddButton workouts={workouts}></AddButton>
+              <SaveForLatterButton workouts={workouts}></SaveForLatterButton>
             </div>
           </div>
         </div>

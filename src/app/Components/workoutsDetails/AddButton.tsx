@@ -3,15 +3,12 @@ import { WorkoutsContext } from "@/context/WorkoutsContext";
 import React, { useContext } from "react";
 import { LuCalendarCheck } from "react-icons/lu";
 
-
-
-
-
 const AddButton = ({ workouts }: { workouts: Iworkout }) => {
   const { addTodaysPlan, setAddTodaysPlan } = useContext(WorkoutsContext);
   const handelAddButton = () => {
     console.log("add button is triggered", workouts);
     setAddTodaysPlan([...addTodaysPlan, workouts]);
+    alert(`you have successfully added ${workouts.name}`);
   };
   return (
     <div>

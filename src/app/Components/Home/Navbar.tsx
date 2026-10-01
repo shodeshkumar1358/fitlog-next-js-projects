@@ -2,6 +2,8 @@ import Image from "next/image";
 import React from "react";
 import logo from "@/assets/logo.png";
 import Link from "next/link";
+import NavbarData from "./NavbarData";
+import SavedData from "./SavedData";
 
 const Navbar = () => {
   return (
@@ -75,52 +77,10 @@ const Navbar = () => {
           "
         >
           {/* Plan */}
-          <button
-            className="
-              flex items-center gap-1.5
-              text-[14px] text-white
-              sm:text-[15px]
-              lg:text-[16px]
-            "
-          >
-            <span>Plan</span>
-
-            <span
-              className="
-                flex h-[20px] w-[20px] items-center justify-center
-                rounded-full bg-[#B6F500]
-                text-[12px] font-bold text-black
-                sm:h-[21px] sm:w-[21px] sm:text-[13px]
-                lg:h-[22px] lg:w-[22px] lg:text-[16px]
-              "
-            >
-              0
-            </span>
-          </button>
+          <NavbarData></NavbarData>
 
           {/* Saved */}
-          <button
-            className="
-              flex items-center gap-1.5
-              text-[14px] text-[#777A7D]
-              sm:text-[15px]
-              lg:text-[16px]
-            "
-          >
-            <span>Saved</span>
-
-            <span
-              className="
-                flex h-[22px] w-[22px] items-center justify-center
-                rounded-full border border-[#535457]
-                text-[13px] text-white
-                sm:h-[24px] sm:w-[24px]
-                lg:h-[25px] lg:w-[25px] lg:text-[16px]
-              "
-            >
-              0
-            </span>
-          </button>
+          <SavedData></SavedData>
         </div>
       </div>
     </nav>
