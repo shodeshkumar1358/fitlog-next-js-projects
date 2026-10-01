@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "./Components/shared/Navbar";
-import HeroSection from "./Components/shared/Hero";
+import Navbar from "./Components/Home/Navbar";
+import HeroSection from "./Components/Home/Hero";
+import Workouts from "./Components/Home/Workouts";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,8 +28,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body>
         <Navbar></Navbar>
-        <HeroSection></HeroSection>
         {children}
+        <HeroSection></HeroSection>
+        <Workouts></Workouts>
       </body>
     </html>
   );
