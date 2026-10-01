@@ -4,7 +4,7 @@ import heroImg from "@/assets/banner.png";
 
 const HeroSection = () => {
   return (
-    <section className=" bg-black px-4 py-5 sm:px-6 lg:px-6 lg:py-15">
+    <section className=" bg-[#0c0d10] px-4 py-5 pd-2 sm:px-6 lg:px-6 lg:pt-15">
       <div
         className="
           mx-auto flex max-w-[1280px] flex-col
