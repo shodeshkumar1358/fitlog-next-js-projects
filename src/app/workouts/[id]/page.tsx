@@ -1,6 +1,7 @@
+import AddButton from "@/app/Components/workoutsDetails/AddButton";
+import SaveForLatter from "@/app/Components/workoutsDetails/SaveForLatter";
 import Image from "next/image";
 import React from "react";
-import { LuBookmark, LuCalendarCheck } from "react-icons/lu";
 interface IworkoutDetailsPageProps {
   params: Promise<{
     id: number;
@@ -170,21 +171,8 @@ const WorkoutsDetailsPage = async ({ params }: IworkoutDetailsPageProps) => {
 
             {/* ================= BUTTONS ================= */}
             <div className="mt-6 flex flex-wrap gap-2">
-              <button
-                type="button"
-                className="flex items-center gap-2 rounded-lg bg-[#b7ff00] px-4 py-2.5 text-[10px] font-bold text-black transition hover:bg-[#c5ff33]"
-              >
-                <LuCalendarCheck size={13} />
-                Add to today's plan
-              </button>
-
-              <button
-                type="button"
-                className="flex items-center gap-2 rounded-lg border border-[#343840] bg-transparent px-4 py-2.5 text-[10px] text-gray-300 transition hover:bg-[#181a20]"
-              >
-                <LuBookmark size={13} />
-                Save for later
-              </button>
+              <AddButton workouts = {workouts}></AddButton>
+              <SaveForLatter></SaveForLatter>
             </div>
           </div>
         </div>
