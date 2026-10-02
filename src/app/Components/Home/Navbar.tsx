@@ -1,3 +1,6 @@
+"use client";
+
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import React from "react";
 import logo from "@/assets/logo.png";
@@ -6,6 +9,12 @@ import NavbarData from "./NavbarData";
 import SavedData from "./SavedData";
 
 const Navbar = () => {
+  const pathname = usePathname();
+
+  const isWorkoutsActive = pathname === "/" || pathname.startsWith("/workouts");
+
+  const isMyPlanActive = pathname.startsWith("/my-plan");
+
   return (
     <nav className="w-full border-b border-[#313030] bg-[#0B0D0F] text-white">
       <div
@@ -33,7 +42,7 @@ const Navbar = () => {
           </h2>
         </Link>
 
-        {/* Desktop / Tablet Navigation */}
+        {/* Navigation */}
         <div
           className="
             order-3 flex w-full items-center justify-center gap-1
@@ -41,28 +50,52 @@ const Navbar = () => {
             lg:order-none lg:w-auto lg:gap-[7px]
           "
         >
+          {/* Workouts */}
           <Link
             href="/"
-            className="
-              rounded-full bg-[#1C2B05]
-              px-3 py-[5px]
-              text-[14px] font-normal text-[#B6F500]
+            className={`
+              rounded-full
+              px-3
+              py-[5px]
+              text-[14px]
+              font-normal
+              transition-all
+              duration-200
               sm:text-[15px]
-              lg:px-[13px] lg:text-[16px]
-            "
+              lg:px-[13px]
+              lg:text-[16px]
+
+              ${
+                isWorkoutsActive
+                  ? "bg-[#1C2B05] text-[#B6F500]"
+                  : "text-[#85878A] hover:bg-[#151c0a] hover:text-[#B6F500]"
+              }
+            `}
           >
             Workouts
           </Link>
 
+          {/* My Plan */}
           <Link
             href="/my-plan"
-            className="
-              px-3 py-[5px]
-              text-[14px] font-normal text-[#85878A]
-              transition-colors hover:text-white
+            className={`
+              rounded-full
+              px-3
+              py-[5px]
+              text-[14px]
+              font-normal
+              transition-all
+              duration-200
               sm:text-[15px]
-              lg:px-[10px] lg:text-[16px]
-            "
+              lg:px-[10px]
+              lg:text-[16px]
+
+              ${
+                isMyPlanActive
+                  ? "bg-[#1C2B05] text-[#B6F500]"
+                  : "text-[#85878A] hover:bg-[#151c0a] hover:text-[#B6F500]"
+              }
+            `}
           >
             My Plan
           </Link>
@@ -77,10 +110,10 @@ const Navbar = () => {
           "
         >
           {/* Plan */}
-          <NavbarData></NavbarData>
+          <NavbarData />
 
           {/* Saved */}
-          <SavedData></SavedData>
+          <SavedData />
         </div>
       </div>
     </nav>

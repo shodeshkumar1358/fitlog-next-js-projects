@@ -3,6 +3,7 @@
 import React, { useContext } from "react";
 import { LuBookmark } from "react-icons/lu";
 import { WorkoutsContext } from "@/context/WorkoutsContext";
+import { toast } from "react-toastify";
 
 const SaveForLatterButton = ({ workouts }: { workouts: Iworkout }) => {
   const { saveForLatter, setSaveForLatter } = useContext(WorkoutsContext);
@@ -12,7 +13,7 @@ const SaveForLatterButton = ({ workouts }: { workouts: Iworkout }) => {
 
     setSaveForLatter([...saveForLatter, workouts]);
 
-    alert(`You have successfully saved ${workouts.name}`);
+    toast.success(`You have successfully saved ${workouts.name}`);
   };
 
   return (
