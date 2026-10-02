@@ -18,7 +18,7 @@ const Workouts = async () => {
       className="mx-auto w-full max-w-[1280px] bg-[#0c0d10] py-12 text-white"
     >
       {/* Top left side */}
-      <div className="mb-8">
+      <div className="mb-8 px-4">
         <h2 className="text-[30px] font-bold uppercase tracking-tight">
           The Library
         </h2>
@@ -29,7 +29,7 @@ const Workouts = async () => {
       </div>
 
       {/* Workout Grid */}
-      <div className="grid grid-cols-1 gap-[18px] md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-[18px] px-4 md:grid-cols-2 md:px-0 lg:grid-cols-3">
         {workwoutsData.map((workout: Iworkout) => (
           <Link key={workout.id} href={`/workouts/${workout.id}`}>
             <article

@@ -35,7 +35,7 @@ const WorkoutsDetailsPage = async ({ params }: IworkoutDetailsPageProps) => {
     <main className="min-h-screen bg-[#0c0d10] px-4 pt-20 pb-20 text-white md:px-8 lg:px-10">
       <section className="mx-auto max-w-[1200px]">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_1fr]">
-          {/* ================= LEFT IMAGE ================= */}
+          {/* LEFT IMAGE */}
           <div className="overflow-hidden rounded-2xl">
             <Image
               src={workouts.image}
@@ -70,7 +70,7 @@ const WorkoutsDetailsPage = async ({ params }: IworkoutDetailsPageProps) => {
               ))}
             </div>
 
-            {/* ================= STATS CARD ================= */}
+            {/* STATS CARD */}
             <div className="mt-4 overflow-hidden rounded-xl border border-[#292c32] bg-[#15171c]">
               {/* Equipment */}
               <div className="flex items-center justify-between border-b border-[#292c32] px-4 py-3">
@@ -150,7 +150,7 @@ const WorkoutsDetailsPage = async ({ params }: IworkoutDetailsPageProps) => {
               </div>
             </div>
 
-            {/* ================= INSTRUCTIONS ================= */}
+            {/* INSTRUCTIONS  */}
             <div className="mt-5">
               <h2 className="text-[11px] font-extrabold uppercase">
                 Instructions
@@ -170,7 +170,7 @@ const WorkoutsDetailsPage = async ({ params }: IworkoutDetailsPageProps) => {
               </ol>
             </div>
 
-            {/* ================= BUTTONS ================= */}
+            {/*Buttons */}
             <div className="mt-6 flex flex-wrap gap-2">
               <AddButton workouts={workouts}></AddButton>
               <SaveForLatterButton workouts={workouts}></SaveForLatterButton>
