@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import heroImg from "@/assets/banner.png";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
@@ -38,16 +39,18 @@ const HeroSection = () => {
             into today's plan, and watch the week's work add up.
           </p>
 
-          <button
-            className="
+          <Link href="#Workouts">
+            <button
+              className="
               mt-6 rounded-[5px] bg-[#b6ff00]
               px-5 py-3 text-[10px] font-extrabold uppercase
               tracking-[0.04em] text-black
               transition hover:bg-[#c7ff3d] 
           "
-          >
-            Browse Workouts
-          </button>
+            >
+              Browse Workouts
+            </button>
+          </Link>
         </div>
 
         {/* Right */}

@@ -13,7 +13,10 @@ const Workouts = async () => {
   const workwoutsData = await getWorkwouts();
   // console.log(workwoutsData, "workout data");
   return (
-    <section className="mx-auto w-full max-w-[1280px] bg-[#0c0d10] py-12 text-white">
+    <section
+      id="Workouts"
+      className="mx-auto w-full max-w-[1280px] bg-[#0c0d10] py-12 text-white"
+    >
       {/* Top left side */}
       <div className="mb-8">
         <h2 className="text-[30px] font-bold uppercase tracking-tight">
