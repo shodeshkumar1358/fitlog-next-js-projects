@@ -39,7 +39,7 @@ const HeroSection = () => {
             into today's plan, and watch the week's work add up.
           </p>
 
-          <a href="#Workouts">
+          <Link href="#Workouts">
             <button
               className="
               mt-6 rounded-[5px] bg-[#b6ff00]
@@ -50,7 +50,7 @@ const HeroSection = () => {
             >
               Browse Workouts
             </button>
-          </a>
+          </Link>
         </div>
 
         {/* Right */}
